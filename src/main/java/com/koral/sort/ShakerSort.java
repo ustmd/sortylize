@@ -1,8 +1,8 @@
 package com.koral.sort;
 
-public class ShakerSort implements SortArray{
-    @Override
-    public int[] sort(int[] array) {
+public class ShakerSort{
+
+    public static int[] sort(int[] array) {
         boolean swapped = true;
         int start = 0;
         int end = array.length;

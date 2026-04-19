@@ -1,9 +1,7 @@
 package com.koral.sort;
 
-public class BubbleSort implements SortArray
-{
-    @Override
-    public int[] sort(int[] array) {
+public class BubbleSort {
+    public static int[] sort(int[] array) {
         for(int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - 1; j++) {
                 if (array[j] > array[j + 1]) {
