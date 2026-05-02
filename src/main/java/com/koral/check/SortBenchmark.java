@@ -9,8 +9,6 @@ public class SortBenchmark {
 
         long start = System.nanoTime();
         method.accept(copy);
-        boolean isCorrect = SortChecker.isCorrectSortOrder(copy);
-        System.out.println(isCorrect);
         long end = System.nanoTime();
 
         return end - start;
