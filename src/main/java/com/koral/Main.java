@@ -32,7 +32,7 @@ public class Main {
         Long totalTime = 0L;
 
         for (int i = 0; i < SORT_ITERATIONS; i++) {
-            Long time = SortBenchmark.measure(sortMethod, array); //SortBenchmark.measure(BinarySort::sort, array);
+            Long time = SortBenchmark.measure(sortMethod, array);
             System.out.println(TimeHelper.convertNanoToSeconds(time));
             totalTime += time;
         }
