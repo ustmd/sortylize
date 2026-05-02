@@ -1,6 +1,6 @@
 package com.koral.sort;
 
-public class BinarySort {
+public class InsertionSort {
 
     public static int[] sort(int[] array) {
         if (array == null || array.length <= 1) {

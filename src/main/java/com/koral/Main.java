@@ -4,7 +4,6 @@ import com.koral.check.SortBenchmark;
 import com.koral.gen.ArrayGenerator;
 import com.koral.sort.*;
 
-import java.sql.Time;
 import java.util.function.Consumer;
 
 
@@ -17,8 +16,8 @@ public class Main {
         ArrayGenerator arrayGenerator = new ArrayGenerator();
         int[] array = arrayGenerator.generate(ARRAY_SIZE);
 
-        measureSortMethod(BubbleSort.class.getSimpleName(), BubbleSort::sort , array, SORT_ITERATIONS);
-        measureSortMethod(BinarySort.class.getSimpleName(), BinarySort::sort , array, SORT_ITERATIONS);
+        //measureSortMethod(BubbleSort.class.getSimpleName(), BubbleSort::sort , array, SORT_ITERATIONS);
+        measureSortMethod(InsertionSort.class.getSimpleName(), InsertionSort::sort , array, SORT_ITERATIONS);
         measureSortMethod(ShakerSort.class.getSimpleName(), ShakerSort::sort , array, SORT_ITERATIONS);
         measureSortMethod(SelectSort.class.getSimpleName(), SelectSort::sort , array, SORT_ITERATIONS);
         measureSortMethod(TreeSort.class.getSimpleName(), TreeSort::sort , array, SORT_ITERATIONS);
