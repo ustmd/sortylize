@@ -1,4 +1,4 @@
-package com.koral.check;
+package com.koral.helper;
 
 public class SortChecker {
     public static boolean isCorrectSortOrder(int[] array) {

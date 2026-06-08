@@ -1,4 +1,4 @@
-package com.koral.sort;
+package com.koral.sort.impl;
 
 public class TreeSort {
     private static class Node {
