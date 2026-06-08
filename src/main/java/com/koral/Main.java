@@ -13,12 +13,13 @@ public class Main {
 
     private final static Integer ARRAY_SIZE = 100_000;
     private final static Integer SORT_ITERATIONS = 10;
+    private final static Integer ARRAY_MAX_VALUE_RANGE = 100_000;
 
     private static final Logger log = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
         ArrayGenerator arrayGenerator = new ArrayGenerator();
-        int[] array = arrayGenerator.generate(ARRAY_SIZE);
+        int[] array = arrayGenerator.generate(ARRAY_SIZE, ARRAY_MAX_VALUE_RANGE);
 
         measureSortMethod(BubbleSort.class.getSimpleName(), BubbleSort::sort , array, SORT_ITERATIONS);
         measureSortMethod(InsertionSort.class.getSimpleName(), InsertionSort::sort , array, SORT_ITERATIONS);
@@ -27,14 +28,13 @@ public class Main {
         measureSortMethod(TreeSort.class.getSimpleName(), TreeSort::sort , array, SORT_ITERATIONS);
     }
 
-
     private static void measureSortMethod(String name, Consumer<int[]> sortMethod,  int[] array, int iterations) {
         log.info("Sorting");
         log.info("Method name: {}", name);
 
         Long totalTime = 0L;
 
-        for (int i = 0; i < SORT_ITERATIONS; i++) {
+        for (int i = 0; i < Main.SORT_ITERATIONS; i++) {
             Long time = SortBenchmark.measure(sortMethod, array);
             log.info("Iteration {}: {}", i, TimeHelper.convertNanoToSeconds(time));
             totalTime += time;
