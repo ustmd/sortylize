@@ -1,4 +1,4 @@
-package com.koral.helper;
+package com.koral.util;
 
 public class ArrayGenerator {
     public int[] generate(int size, int maxValue) {

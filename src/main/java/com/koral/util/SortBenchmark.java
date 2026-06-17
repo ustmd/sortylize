@@ -1,4 +1,4 @@
-package com.koral.helper;
+package com.koral.util;
 
 import java.util.function.Consumer;
 

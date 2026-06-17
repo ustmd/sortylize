@@ -1,4 +1,4 @@
-package com.koral.helper;
+package com.koral.util;
 
 public class TimeHelper {
     public static double convertNanoToSeconds(long nano) {

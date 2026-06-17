@@ -1,8 +1,8 @@
 package com.koral;
 
-import com.koral.helper.SortBenchmark;
-import com.koral.helper.ArrayGenerator;
-import com.koral.helper.TimeHelper;
+import com.koral.util.SortBenchmark;
+import com.koral.util.ArrayGenerator;
+import com.koral.util.TimeHelper;
 import com.koral.sort.impl.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,12 +34,12 @@ public class Main {
 
         Long totalTime = 0L;
 
-        for (int i = 0; i < Main.SORT_ITERATIONS; i++) {
+        for (int i = 0; i < iterations; i++) {
             Long time = SortBenchmark.measure(sortMethod, array);
             log.info("Iteration {}: {}", i, TimeHelper.convertNanoToSeconds(time));
             totalTime += time;
         }
 
-        log.info("Avg time: {}", TimeHelper.convertNanoToSeconds(totalTime / SORT_ITERATIONS));
+        log.info("Avg time: {}", TimeHelper.convertNanoToSeconds(totalTime / iterations));
     }
 }
