@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/koral/projects/sortylize/cpp/main'
+relocations:     []
+...

@@ -12,22 +12,28 @@ with open("numbers.txt", "w") as file:
 print("Массив сохранён в numbers.txt")
 
 
-def bubble_sort(arr):
-    n = len(arr)
+# def bubble_sort(arr):
+#     n = len(arr)
 
-    for i in range(n):
-        swapped = False
+#     for i in range(n):
+#         swapped = False
 
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#                 swapped = True
 
-        if not swapped:
-            break
+#         if not swapped:
+#             break
 
-    return arr
+#     return arr
 
+def sort(arr):
+        for i in range(len(arr) - 1):
+            for j in range(len(arr) - 1):
+                if arr[j] > arr[j + 1]:
+                    arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        return arr
 
 # Копия массива для сортировки
 arr_copy = array.copy()
@@ -35,7 +41,7 @@ arr_copy = array.copy()
 # Замер времени
 start_time = time.time()
 
-bubble_sort(arr_copy)
+sort(arr_copy)
 
 end_time = time.time()
 
