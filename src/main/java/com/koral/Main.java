@@ -11,8 +11,8 @@ import java.util.function.Consumer;
 
 public class Main {
 
-    private final static Integer ARRAY_SIZE = 100_000;
-    private final static Integer SORT_ITERATIONS = 10;
+    private final static Integer ARRAY_SIZE = 50_000;
+    private final static Integer SORT_ITERATIONS = 1;
     private final static Integer ARRAY_MAX_VALUE_RANGE = 100_000;
 
     private static final Logger log = LogManager.getLogger(Main.class);
